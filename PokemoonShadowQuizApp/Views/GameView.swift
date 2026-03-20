@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GameView: View {
-    @StateObject private var viewModel = GameViewModel()
+    @State private var viewModel = GameViewModel()
     @AppStorage("highScore") private var highScore: Int = 0
     @AppStorage("difficulty") private var selectedDifficulty: String = GameViewModel.Difficulty.medium.rawValue
 
@@ -106,7 +106,8 @@ struct GameView: View {
 
                                     if option != viewModel.correctPokemon {
                                         animateMissIndex = viewModel.lives
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                                        Task {
+                                            try? await Task.sleep(for: .milliseconds(400))
                                             animateMissIndex = nil
                                         }
                                     }
@@ -138,28 +139,23 @@ struct GameView: View {
             .onDisappear {
                 viewModel.stopTimer()
             }
-            .onReceive(viewModel.$isGameOver) { isOver in
+            .onChange(of: viewModel.isGameOver) { _, isOver in
                 if isOver {
                     viewModel.stopTimer()
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                        withAnimation {
-                            showGameOver = true
-                        }
+                    Task {
+                        try? await Task.sleep(for: .seconds(1))
+                        withAnimation { showGameOver = true }
                     }
                 }
             }
             if showGameOver {
                 GameOverOverlay(score: viewModel.score) {
-                    // Try Again
-                    withAnimation {
-                        showGameOver = false
-                    }
+                    withAnimation { showGameOver = false }
                     viewModel.startGame()
                 } exitAction: {
-                    // Exit to main menu
                     presentationMode.wrappedValue.dismiss()
                 }
-                .zIndex(1) // <- zapewnia, że nakładka jest na wierzchu
+                .zIndex(1)
             }
         }
     }
