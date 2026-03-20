@@ -10,10 +10,33 @@
 		157191DC2E2554ED00D3EC46 /* PokemoonShadowQuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemoonShadowQuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		157192002E25581100D3EC46 /* Exceptions for "PokemoonShadowQuizApp" folder in "PokemoonShadowQuizApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 157191DB2E2554ED00D3EC46 /* PokemoonShadowQuizApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		157191DE2E2554ED00D3EC46 /* PokemoonShadowQuizApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				157192002E25581100D3EC46 /* Exceptions for "PokemoonShadowQuizApp" folder in "PokemoonShadowQuizApp" target */,
+			);
 			path = PokemoonShadowQuizApp;
+			sourceTree = "<group>";
+		};
+		157192032E25587700D3EC46 /* Model */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		157192052E25588800D3EC46 /* ViewModel */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -33,6 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				157191DE2E2554ED00D3EC46 /* PokemoonShadowQuizApp */,
+				157192052E25588800D3EC46 /* ViewModel */,
+				157192032E25587700D3EC46 /* Model */,
 				157191DD2E2554ED00D3EC46 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,6 +87,8 @@
 			);
 			fileSystemSynchronizedGroups = (
 				157191DE2E2554ED00D3EC46 /* PokemoonShadowQuizApp */,
+				157192032E25587700D3EC46 /* Model */,
+				157192052E25588800D3EC46 /* ViewModel */,
 			);
 			name = PokemoonShadowQuizApp;
 			packageProductDependencies = (
@@ -254,6 +281,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PokemoonShadowQuizApp/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -297,6 +325,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PokemoonShadowQuizApp/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
