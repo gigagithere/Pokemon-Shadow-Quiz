@@ -7,34 +7,30 @@
 
 import SwiftUI
 
+enum AnswerState {
+    case idle
+    case selected
+    case correct
+    case wrong
+}
+
 struct AnswerButton: View {
     let title: String
-    let isCorrect: Bool
-    let isSelected: Bool
-    let wasAnswered: Bool
+    let state: AnswerState
     let action: () -> Void
-    
-    var showFlash: Bool {
-        wasAnswered && isCorrect
-    }
 
     var backgroundColor: Color {
-        if wasAnswered {
-            if isCorrect {
-                return .retroCorrect
-            } else if isSelected {
-                return .retroWrong
-            }
-        } else if isSelected {
-            return .retroSelected
+        switch state {
+        case .idle:     return .retroButton
+        case .selected: return .retroSelected
+        case .correct:  return .retroCorrect
+        case .wrong:    return .retroWrong
         }
-
-        return .retroButton
     }
 
     var body: some View {
         Button(action: {
-            if !wasAnswered {
+            if state == .idle {
                 action()
             }
         }) {
@@ -45,9 +41,9 @@ struct AnswerButton: View {
 
                 RoundedRectangle(cornerRadius: 4)
                     .fill(backgroundColor)
-                    .opacity(showFlash ? 1.0 : 0.85)
-                    .scaleEffect(showFlash ? 1.02 : 1.0)
-                    .animation(.easeOut(duration: 0.2), value: showFlash)
+                    .opacity(state == .correct ? 1.0 : 0.85)
+                    .scaleEffect(state == .correct ? 1.02 : 1.0)
+                    .animation(.easeOut(duration: 0.2), value: state == .correct)
                     .overlay(
                         RoundedRectangle(cornerRadius: 4)
                             .stroke(Color.black, lineWidth: 2)
@@ -60,31 +56,20 @@ struct AnswerButton: View {
                     .padding(.vertical, 8)
             }
             .frame(height: 54)
-            .scaleEffect(isSelected ? 1.05 : 1.0) // efekt kliknięcia
-            .animation(.spring(response: 0.3, dampingFraction: 0.5), value: isSelected)
+            .scaleEffect(state == .selected ? 1.05 : 1.0)
+            .animation(.spring(response: 0.3, dampingFraction: 0.5), value: state == .selected)
         }
-        .disabled(wasAnswered)
+        .disabled(state != .idle)
         .frame(maxWidth: .infinity)
         .padding(.horizontal, 20)
     }
 }
 
 #Preview {
-    AnswerButton(
-        title: "Poprawna Odpowiedz",
-        isCorrect: true,
-        isSelected: true,
-        wasAnswered: true,
-        action: { print("poprawna odpowiedz") }
-    )
-}
-
-#Preview {
-    AnswerButton(
-        title: "Niepoprawna odpowiedz",
-        isCorrect: false,
-        isSelected: true,
-        wasAnswered: true,
-        action: { print("poprawna odpowiedz") }
-    )
+    VStack {
+        AnswerButton(title: "Poprawna", state: .correct, action: {})
+        AnswerButton(title: "Zła", state: .wrong, action: {})
+        AnswerButton(title: "Zaznaczona", state: .selected, action: {})
+        AnswerButton(title: "Domyślna", state: .idle, action: {})
+    }
 }

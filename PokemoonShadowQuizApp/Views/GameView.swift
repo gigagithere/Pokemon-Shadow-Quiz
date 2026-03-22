@@ -98,9 +98,7 @@ struct GameView: View {
 
                             AnswerButton(
                                 title: option.name,
-                                isCorrect: option == viewModel.correctPokemon,
-                                isSelected: option == viewModel.selectedPokemon,
-                                wasAnswered: viewModel.didSelectAnswer,
+                                state: viewModel.state(for: option),
                                 action: {
                                     viewModel.choose(option)
 
@@ -159,6 +157,8 @@ struct GameView: View {
             }
         }
     }
+
+
 }
 
 #Preview {

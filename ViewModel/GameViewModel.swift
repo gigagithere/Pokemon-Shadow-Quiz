@@ -108,6 +108,15 @@ class GameViewModel {
         timerTask = nil
     }
     
+    func state(for option: Pokemon) -> AnswerState {
+        guard didSelectAnswer else {
+            return option == selectedPokemon ? .selected : .idle
+        }
+        if option == correctPokemon { return .correct }
+        if option == selectedPokemon { return .wrong }
+        return .idle
+    }
+
     private func loseLife() {
         lives -= 1
         if lives == 0 {
