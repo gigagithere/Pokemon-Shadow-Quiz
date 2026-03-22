@@ -13,7 +13,7 @@ struct MenuButton: View {
 
     var body: some View {
         NavigationLink(value: value) {
-            PokemonButtonContent(title: title)
+            MenuButtonContent(title: title)
         }
         .buttonStyle(.plain)
         .frame(maxWidth: .infinity)
@@ -21,7 +21,7 @@ struct MenuButton: View {
     }
 }
 
-private struct PokemonButtonContent: View {
+private struct MenuButtonContent: View {
     let title: String
 
     var body: some View {

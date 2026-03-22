@@ -19,4 +19,5 @@ extension Color {
     static let retroGray         = Color(red: 0.85, green: 0.85, blue: 0.85)
     static let retroDialogBg     = Color(red: 0.2,  green: 0.2,  blue: 0.2)
     static let retroSettingsBg   = Color(red: 0.96, green: 0.94, blue: 0.85)
+    static let retroActive       = Color.green.opacity(0.7)
 }
