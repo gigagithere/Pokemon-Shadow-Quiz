@@ -139,8 +139,8 @@ struct GameView: View {
             .onDisappear {
                 viewModel.stopTimer()
             }
-            .onChange(of: viewModel.isGameOver) { _, isOver in
-                if isOver {
+            .onChange(of: viewModel.gameOver) { _, gameOver in
+                if gameOver {
                     viewModel.stopTimer()
                     Task {
                         try? await Task.sleep(for: .seconds(1))
