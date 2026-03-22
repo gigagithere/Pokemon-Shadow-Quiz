@@ -34,7 +34,7 @@ struct GameOverOverlay: View {
                         .padding(.vertical, 12)
                         .background(
                             RoundedRectangle(cornerRadius: 8)
-                                .fill(Color(red: 0.98, green: 0.93, blue: 0.75))
+                                .fill(Color.retroButton)
                                 .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.black, lineWidth: 2))
                         )
                 }
@@ -48,7 +48,7 @@ struct GameOverOverlay: View {
                         .padding(.vertical, 10)
                         .background(
                             RoundedRectangle(cornerRadius: 8)
-                                .fill(Color(red: 0.9, green: 0.9, blue: 0.9))
+                                .fill(Color.retroGray)
                                 .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.black, lineWidth: 2))
                         )
                 }
@@ -56,7 +56,7 @@ struct GameOverOverlay: View {
             .padding()
             .background(
                 RoundedRectangle(cornerRadius: 16)
-                    .fill(Color(red: 0.2, green: 0.2, blue: 0.2))
+                    .fill(Color.retroDialogBg)
                     .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.white, lineWidth: 2))
             )
             .padding(.horizontal, 40)

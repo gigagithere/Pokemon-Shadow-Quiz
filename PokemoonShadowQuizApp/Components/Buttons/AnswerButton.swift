@@ -21,15 +21,15 @@ struct AnswerButton: View {
     var backgroundColor: Color {
         if wasAnswered {
             if isCorrect {
-                return Color(red: 0.6, green: 0.8, blue: 0.45) // retro green
+                return .retroCorrect
             } else if isSelected {
-                return Color(red: 0.94, green: 0.4, blue: 0.4) // retro red
+                return .retroWrong
             }
         } else if isSelected {
-            return Color(red: 0.95, green: 0.85, blue: 0.55) // zaznaczony retro-żółty
+            return .retroSelected
         }
 
-        return Color(red: 0.98, green: 0.93, blue: 0.75) // default retro cream
+        return .retroButton
     }
 
     var body: some View {
@@ -40,7 +40,7 @@ struct AnswerButton: View {
         }) {
             ZStack {
                 RoundedRectangle(cornerRadius: 4)
-                    .fill(Color(red: 0.18, green: 0.18, blue: 0.18))
+                    .fill(Color.retroButtonShadow)
                     .offset(y: 4)
 
                 RoundedRectangle(cornerRadius: 4)

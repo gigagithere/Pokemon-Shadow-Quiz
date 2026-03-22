@@ -42,7 +42,7 @@ struct GameView: View {
                             .padding(10)
                             .background(
                                 RoundedRectangle(cornerRadius: 8)
-                                    .fill(Color(red: 1.0, green: 0.98, blue: 0.88))
+                                    .fill(Color.retroCard)
                                     .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.black, lineWidth: 2))
                             )
                     }
@@ -87,7 +87,7 @@ struct GameView: View {
                         .padding(10)
                         .background(
                             RoundedRectangle(cornerRadius: 8)
-                                .fill(Color(red: 1.0, green: 0.98, blue: 0.88))
+                                .fill(Color.retroCard)
                                 .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.black, lineWidth: 2))
                         )
 
@@ -124,7 +124,7 @@ struct GameView: View {
                     .padding()
                     .background(
                         RoundedRectangle(cornerRadius: 8)
-                            .fill(Color(red: 1.0, green: 0.98, blue: 0.88))
+                            .fill(Color.retroCard)
                             .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.black, lineWidth: 2))
                     )
                     .padding()

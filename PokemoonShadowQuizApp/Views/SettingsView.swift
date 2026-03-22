@@ -30,7 +30,7 @@ struct SettingsView: View {
                         .padding(.vertical, 6)
                         .background(
                             RoundedRectangle(cornerRadius: 4)
-                                .fill(Color(red: 0.98, green: 0.93, blue: 0.75))
+                                .fill(Color.retroButton)
                                 .overlay(RoundedRectangle(cornerRadius: 4).stroke(Color.black, lineWidth: 2))
                         )
                 }
@@ -59,7 +59,7 @@ struct SettingsView: View {
                                 .padding(.vertical, 10)
                                 .background(
                                     RoundedRectangle(cornerRadius: 4)
-                                        .fill(difficulty.rawValue == selectedDifficulty ? Color.green.opacity(0.7) : Color(red: 0.98, green: 0.93, blue: 0.75))
+                                        .fill(difficulty.rawValue == selectedDifficulty ? Color.green.opacity(0.7) : Color.retroButton)
                                         .overlay(
                                             RoundedRectangle(cornerRadius: 4)
                                                 .stroke(Color.black, lineWidth: 2)
@@ -79,7 +79,7 @@ struct SettingsView: View {
             Spacer()
         }
         .padding()
-        .background(Color(red: 0.96, green: 0.94, blue: 0.85).ignoresSafeArea())
+        .background(Color.retroSettingsBg.ignoresSafeArea())
         .navigationBarTitleDisplayMode(.inline)
     }
 
@@ -91,7 +91,7 @@ struct SettingsView: View {
             .frame(maxWidth: .infinity)
             .background(
                 RoundedRectangle(cornerRadius: 8)
-                    .fill(Color(red: 1.0, green: 0.98, blue: 0.88))
+                    .fill(Color.retroCard)
                     .overlay(
                         RoundedRectangle(cornerRadius: 8)
                             .stroke(Color.black, lineWidth: 2)

@@ -39,7 +39,7 @@ struct RetroToggle: View {
                 .background(
                     isActive
                         ? Color.green.opacity(0.8)
-                        : Color(red: 0.85, green: 0.85, blue: 0.85)
+                        : Color.retroGray
                 )
                 .overlay(
                     Rectangle()

@@ -40,15 +40,15 @@ struct PokemonButton<Destination: View>: View {
         ZStack {
             // Tło: cień dolny (ciemniejszy odcień)
             RoundedRectangle(cornerRadius: 4)
-                .fill(Color(red: 0.18, green: 0.18, blue: 0.18)) // np. ciemnoszary cień
+                .fill(Color.retroButtonShadow)
                 .offset(y: 4)
 
             // Główna warstwa przycisku
             RoundedRectangle(cornerRadius: 4)
-                .fill(Color(red: 0.98, green: 0.93, blue: 0.75)) // kremowy przycisk
+                .fill(Color.retroButton)
                 .overlay(
                     RoundedRectangle(cornerRadius: 4)
-                        .stroke(Color(red: 0.13, green: 0.14, blue: 0.15), lineWidth: 2) // border retro
+                        .stroke(Color.retroButtonBorder, lineWidth: 2)
                 )
 
             // Tekst
