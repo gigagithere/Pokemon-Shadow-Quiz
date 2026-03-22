@@ -27,7 +27,7 @@ private struct MenuButtonContent: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 4)
-                .fill(Color.retroButtonShadow)
+                .fill((Color.retroButtonShadow))
                 .offset(y: 4)
             RoundedRectangle(cornerRadius: 4)
                 .fill(Color.retroButton)
@@ -35,7 +35,7 @@ private struct MenuButtonContent: View {
             Text(title)
                 .textCase(.uppercase)
                 .font(.custom("Pokemon Classic", size: 18))
-                .foregroundStyle(.black)
+                .foregroundStyle(.primary)
                 .padding(.horizontal, 12)
                 .padding(.vertical, 8)
         }

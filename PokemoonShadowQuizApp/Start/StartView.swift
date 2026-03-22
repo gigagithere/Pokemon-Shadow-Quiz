@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+enum Route: Hashable {
+    case game
+    case settings
+    case highScores
+}
+
 struct StartView: View {
     var body: some View {
         NavigationStack {

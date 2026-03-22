@@ -14,7 +14,7 @@ struct DifficultyView: View {
     var body: some View {
         Text("Difficulty")
             .font(.custom("Pokemon Classic", size: 16))
-            .foregroundColor(.black)
+            .foregroundColor(.primary)
         
         HStack(spacing: 12) {
             ForEach(GameViewModel.Difficulty.allCases) { difficulty in

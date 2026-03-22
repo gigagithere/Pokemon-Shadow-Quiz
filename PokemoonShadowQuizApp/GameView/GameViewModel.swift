@@ -5,8 +5,8 @@
 //  Created by Bartosz Mrugała on 14/07/2025.
 //
 
-import Foundation
 import Observation
+import SwiftUI
 
 @Observable
 @MainActor
@@ -33,6 +33,8 @@ class GameViewModel {
     var lives = 3
     var selectedPokemon: Pokemon? = nil
     var gameOver = false
+    var animateMissIndex: Int? = nil
+    var showGameOver = false
 
     private var timerTask: Task<Void, any Error>?
     
@@ -40,6 +42,7 @@ class GameViewModel {
         score = 0
         lives = 3
         gameOver = false
+        showGameOver = false
         didSelectAnswer = false
         nextRound()
     }
@@ -73,6 +76,11 @@ class GameViewModel {
         } else {
             loseLife()
             if gameOver { return }
+            animateMissIndex = lives
+            Task {
+                try? await Task.sleep(for: .milliseconds(400))
+                animateMissIndex = nil
+            }
         }
 
         timerTask = Task {
@@ -122,6 +130,10 @@ class GameViewModel {
         if lives == 0 {
             stopTimer()
             gameOver = true
+            Task {
+                try? await Task.sleep(for: .seconds(1))
+                withAnimation { showGameOver = true }
+            }
         }
     }
      

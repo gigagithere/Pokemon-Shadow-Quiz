@@ -16,13 +16,13 @@ struct BackButton: View {
             }) {
                 Text("← Back")
                     .font(.custom("Pokemon Classic", size: 14))
-                    .foregroundColor(.black)
+                    .foregroundColor(.primary)
                     .padding(.horizontal, 12)
                     .padding(.vertical, 6)
                     .background(
                         RoundedRectangle(cornerRadius: 4)
                             .fill(Color.retroButton)
-                            .overlay(RoundedRectangle(cornerRadius: 4).stroke(Color.black, lineWidth: 2))
+                            .overlay(RoundedRectangle(cornerRadius: 4).stroke(Color.retroBorder, lineWidth: 2))
                     )
             }
             .buttonStyle(.plain)

@@ -42,16 +42,15 @@ struct AnswerButton: View {
                 RoundedRectangle(cornerRadius: 4)
                     .fill(backgroundColor)
                     .opacity(state == .correct ? 1.0 : 0.85)
-                    .scaleEffect(state == .correct ? 1.02 : 1.0)
                     .animation(.easeOut(duration: 0.2), value: state == .correct)
                     .overlay(
                         RoundedRectangle(cornerRadius: 4)
-                            .stroke(Color.black, lineWidth: 2)
+                            .stroke(Color.retroBorder, lineWidth: 2)
                     )
 
                 Text(title.uppercased())
                     .font(.custom("Pokemon Classic", size: 18))
-                    .foregroundColor(.black)
+                    .foregroundColor(.primary)
                     .padding(.horizontal, 12)
                     .padding(.vertical, 8)
             }

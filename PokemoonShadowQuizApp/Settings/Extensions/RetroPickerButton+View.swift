@@ -13,15 +13,15 @@ private struct RetroPickerButtonModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.custom("Pokemon Classic", size: 14))
-            .foregroundColor(.black)
+            .foregroundColor(.primary)
             .padding(.horizontal, 16)
             .padding(.vertical, 10)
             .background(
                 RoundedRectangle(cornerRadius: 4)
-                    .fill(isActive ? Color.retroActive : Color.retroButton)
+                    .fill(isActive ? Color.retroCorrect : Color.retroButton)
                     .overlay(
                         RoundedRectangle(cornerRadius: 4)
-                            .stroke(Color.black, lineWidth: 2)
+                            .stroke(Color.retroBorder, lineWidth: 2)
                     )
             )
     }

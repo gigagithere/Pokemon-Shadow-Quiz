@@ -29,13 +29,13 @@ struct GameOverOverlay: View {
                 Button(action: tryAgainAction) {
                     Text("Try Again")
                         .font(.custom("Pokemon Classic", size: 18))
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                         .padding(.horizontal, 24)
                         .padding(.vertical, 12)
                         .background(
                             RoundedRectangle(cornerRadius: 8)
                                 .fill(Color.retroButton)
-                                .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.black, lineWidth: 2))
+                                .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.retroBorder, lineWidth: 2))
                         )
                 }
                 
@@ -43,13 +43,13 @@ struct GameOverOverlay: View {
                 Button(action: exitAction) {
                     Text("Exit to Main Menu")
                         .font(.custom("Pokemon Classic", size: 16))
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                         .padding(.horizontal, 24)
                         .padding(.vertical, 10)
                         .background(
                             RoundedRectangle(cornerRadius: 8)
                                 .fill(Color.retroGray)
-                                .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.black, lineWidth: 2))
+                                .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.retroBorder, lineWidth: 2))
                         )
                 }
             }

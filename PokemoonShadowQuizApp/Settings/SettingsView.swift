@@ -12,8 +12,7 @@ struct SettingsView: View {
 
     @AppStorage("showNameBeforeStart") private var showNameBeforeStart: Bool = false
     @AppStorage("highScore") private var highScore: Int = 0
-
-    @State private var showResetAlert = false
+    @AppStorage("isDarkMode") private var isDarkMode = false
 
     var body: some View {
         VStack(spacing: 24) {
@@ -21,7 +20,7 @@ struct SettingsView: View {
             
             Text("Settings")
                 .font(.custom("Pokemon Classic", size: 24))
-                .foregroundColor(.black)
+                .foregroundColor(.primary)
 
             settingsCard {
                 DifficultyView()
@@ -29,6 +28,10 @@ struct SettingsView: View {
 
             settingsCard {
                 RetroToggle(title: "Show name before start", isOn: $showNameBeforeStart)
+            }
+
+            settingsCard {
+                RetroToggle(title: "Dark mode", isOn: $isDarkMode)
             }
 
             Spacer()
@@ -48,7 +51,7 @@ struct SettingsView: View {
                     .fill(Color.retroCard)
                     .overlay(
                         RoundedRectangle(cornerRadius: 8)
-                            .stroke(Color.black, lineWidth: 2)
+                            .stroke(Color.retroBorder, lineWidth: 2)
                     )
             )
     }
