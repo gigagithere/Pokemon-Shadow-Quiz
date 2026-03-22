@@ -19,8 +19,6 @@ struct GameView: View {
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                RetroBackgroundView()
-
                 VStack(spacing: 16) {
                     // TIMER + LIVES
                     HStack(spacing: 8) {
@@ -129,7 +127,17 @@ struct GameView: View {
 
                     Spacer(minLength: 8)
                 }
+                if showGameOver {
+                    GameOverOverlay(score: viewModel.score) {
+                        withAnimation { showGameOver = false }
+                        viewModel.startGame()
+                    } exitAction: {
+                        presentationMode.wrappedValue.dismiss()
+                    }
+                    .zIndex(1)
+                }
             }
+            .retroBackground()
             .onAppear {
                 viewModel.difficulty = GameViewModel.Difficulty(rawValue: selectedDifficulty) ?? .medium
                 viewModel.startGame()
@@ -145,15 +153,6 @@ struct GameView: View {
                         withAnimation { showGameOver = true }
                     }
                 }
-            }
-            if showGameOver {
-                GameOverOverlay(score: viewModel.score) {
-                    withAnimation { showGameOver = false }
-                    viewModel.startGame()
-                } exitAction: {
-                    presentationMode.wrappedValue.dismiss()
-                }
-                .zIndex(1)
             }
         }
     }

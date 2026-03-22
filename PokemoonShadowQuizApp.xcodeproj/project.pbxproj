@@ -34,11 +34,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		157192052E25588800D3EC46 /* ViewModel */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				157191DE2E2554ED00D3EC46 /* PokemoonShadowQuizApp */,
-				157192052E25588800D3EC46 /* ViewModel */,
 				157192032E25587700D3EC46 /* Model */,
 				157191DD2E2554ED00D3EC46 /* Products */,
 			);
@@ -88,7 +82,6 @@
 			fileSystemSynchronizedGroups = (
 				157191DE2E2554ED00D3EC46 /* PokemoonShadowQuizApp */,
 				157192032E25587700D3EC46 /* Model */,
-				157192052E25588800D3EC46 /* ViewModel */,
 			);
 			name = PokemoonShadowQuizApp;
 			packageProductDependencies = (
