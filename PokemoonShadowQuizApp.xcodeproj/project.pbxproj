@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		15AF8D4C2F718BDA00DFE029 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 157191D42E2554ED00D3EC46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 157191DB2E2554ED00D3EC46;
+			remoteInfo = PokemoonShadowQuizApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		157191DC2E2554ED00D3EC46 /* PokemoonShadowQuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemoonShadowQuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15AF8D482F718BDA00DFE029 /* PokemoonShadowQuizAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemoonShadowQuizAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -34,10 +45,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		15AF8D492F718BDA00DFE029 /* PokemoonShadowQuizAppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PokemoonShadowQuizAppTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		157191D92E2554ED00D3EC46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15AF8D452F718BDA00DFE029 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -52,6 +75,7 @@
 			children = (
 				157191DE2E2554ED00D3EC46 /* PokemoonShadowQuizApp */,
 				157192032E25587700D3EC46 /* Model */,
+				15AF8D492F718BDA00DFE029 /* PokemoonShadowQuizAppTests */,
 				157191DD2E2554ED00D3EC46 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				157191DC2E2554ED00D3EC46 /* PokemoonShadowQuizApp.app */,
+				15AF8D482F718BDA00DFE029 /* PokemoonShadowQuizAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,6 +115,29 @@
 			productReference = 157191DC2E2554ED00D3EC46 /* PokemoonShadowQuizApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		15AF8D472F718BDA00DFE029 /* PokemoonShadowQuizAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15AF8D4E2F718BDA00DFE029 /* Build configuration list for PBXNativeTarget "PokemoonShadowQuizAppTests" */;
+			buildPhases = (
+				15AF8D442F718BDA00DFE029 /* Sources */,
+				15AF8D452F718BDA00DFE029 /* Frameworks */,
+				15AF8D462F718BDA00DFE029 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15AF8D4D2F718BDA00DFE029 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				15AF8D492F718BDA00DFE029 /* PokemoonShadowQuizAppTests */,
+			);
+			name = PokemoonShadowQuizAppTests;
+			packageProductDependencies = (
+			);
+			productName = PokemoonShadowQuizAppTests;
+			productReference = 15AF8D482F718BDA00DFE029 /* PokemoonShadowQuizAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -97,11 +145,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2600;
+				LastSwiftUpdateCheck = 2630;
 				LastUpgradeCheck = 2630;
 				TargetAttributes = {
 					157191DB2E2554ED00D3EC46 = {
 						CreatedOnToolsVersion = 26.0;
+					};
+					15AF8D472F718BDA00DFE029 = {
+						CreatedOnToolsVersion = 26.3;
+						TestTargetID = 157191DB2E2554ED00D3EC46;
 					};
 				};
 			};
@@ -120,12 +172,20 @@
 			projectRoot = "";
 			targets = (
 				157191DB2E2554ED00D3EC46 /* PokemoonShadowQuizApp */,
+				15AF8D472F718BDA00DFE029 /* PokemoonShadowQuizAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		157191DA2E2554ED00D3EC46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15AF8D462F718BDA00DFE029 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -142,7 +202,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		15AF8D442F718BDA00DFE029 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15AF8D4D2F718BDA00DFE029 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 157191DB2E2554ED00D3EC46 /* PokemoonShadowQuizApp */;
+			targetProxy = 15AF8D4C2F718BDA00DFE029 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		157191E52E2554EF00D3EC46 /* Debug */ = {
@@ -355,6 +430,53 @@
 			};
 			name = Release;
 		};
+		15AF8D4F2F718BDA00DFE029 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66XYZXW898;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Bartosz.PokemoonShadowQuizAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokemoonShadowQuizApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PokemoonShadowQuizApp";
+			};
+			name = Debug;
+		};
+		15AF8D502F718BDA00DFE029 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66XYZXW898;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Bartosz.PokemoonShadowQuizAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokemoonShadowQuizApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PokemoonShadowQuizApp";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -372,6 +494,15 @@
 			buildConfigurations = (
 				157191E82E2554EF00D3EC46 /* Debug */,
 				157191E92E2554EF00D3EC46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15AF8D4E2F718BDA00DFE029 /* Build configuration list for PBXNativeTarget "PokemoonShadowQuizAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15AF8D4F2F718BDA00DFE029 /* Debug */,
+				15AF8D502F718BDA00DFE029 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
