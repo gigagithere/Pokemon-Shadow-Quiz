@@ -12,7 +12,7 @@ private struct RetroPickerButtonModifier: ViewModifier {
 
     func body(content: Content) -> some View {
         content
-            .font(.custom("Pokemon Classic", size: 14))
+            .font(.pokemon(14))
             .foregroundColor(.primary)
             .padding(.horizontal, 16)
             .padding(.vertical, 10)

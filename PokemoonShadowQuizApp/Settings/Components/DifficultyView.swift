@@ -13,7 +13,7 @@ struct DifficultyView: View {
     
     var body: some View {
         Text("Difficulty")
-            .font(.custom("Pokemon Classic", size: 16))
+            .font(.pokemon(16))
             .foregroundColor(.primary)
         
         HStack(spacing: 12) {

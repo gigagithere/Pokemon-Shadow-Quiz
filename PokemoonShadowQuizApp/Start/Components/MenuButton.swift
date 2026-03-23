@@ -34,7 +34,7 @@ private struct MenuButtonContent: View {
                 .stroke(Color.retroButtonBorder, lineWidth: 2)
             Text(title)
                 .textCase(.uppercase)
-                .font(.custom("Pokemon Classic", size: 18))
+                .font(.pokemon(18))
                 .foregroundStyle(.primary)
                 .padding(.horizontal, 12)
                 .padding(.vertical, 8)

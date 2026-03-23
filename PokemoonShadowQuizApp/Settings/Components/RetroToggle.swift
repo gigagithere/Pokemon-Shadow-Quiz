@@ -14,7 +14,7 @@ struct RetroToggle: View {
     var body: some View {
         HStack {
             Text(title)
-                .font(.custom("Pokemon Classic", size: 16))
+                .font(.pokemon(16))
                 .foregroundColor(.primary)
 
             Spacer()

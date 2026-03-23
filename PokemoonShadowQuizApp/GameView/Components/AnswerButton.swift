@@ -48,7 +48,7 @@ struct AnswerButton: View {
                     )
                 
                 Text(title.uppercased())
-                    .font(.custom("Pokemon Classic", size: 18))
+                    .font(.pokemon(18))
                     .foregroundColor(.primary)
                     .padding(.horizontal, 12)
                     .padding(.vertical, 8)

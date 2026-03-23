@@ -15,7 +15,7 @@ struct BackButton: View {
                 dismiss()
             }) {
                 Text("← Back")
-                    .font(.custom("Pokemon Classic", size: 14))
+                    .font(.pokemon(14))
                     .foregroundColor(.primary)
                     .padding(.horizontal, 12)
                     .padding(.vertical, 6)

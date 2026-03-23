@@ -81,7 +81,7 @@ private struct Score: View {
     
     var body: some View {
         Text("Score: \(viewModel.score)")
-            .font(.custom("Pokemon Classic", size: 18))
+            .font(.pokemon(18))
             .foregroundStyle(.primary)
             .padding(10)
             .background(
@@ -115,7 +115,7 @@ private struct Countdown: View {
     
     var body: some View {
         Text("\(viewModel.timeRemaining)")
-            .font(.custom("Pokemon Classic", size: 24))
+            .font(.pokemon(24))
             .foregroundStyle(.primary)
             .padding(10)
             .background(
@@ -130,11 +130,11 @@ private struct Title: View {
     var body: some View {
         VStack(spacing: 4) {
             Text("Who's that")
-                .font(.custom("Pokemon Classic", size: 24))
+                .font(.pokemon(24))
                 .foregroundStyle(.primary)
-            
+
             Text("Pokémon?")
-                .font(.custom("Pokemon Classic", size: 32))
+                .font(.pokemon(32))
                 .foregroundStyle(.primary)
         }
     }

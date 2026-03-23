@@ -19,7 +19,7 @@ struct SettingsView: View {
             BackButton()
             
             Text("Settings")
-                .font(.custom("Pokemon Classic", size: 24))
+                .font(.pokemon(24))
                 .foregroundColor(.primary)
 
             settingsCard {

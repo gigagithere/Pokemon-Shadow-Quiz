@@ -19,16 +19,16 @@ struct GameOverOverlay: View {
 
             VStack(spacing: 16) {
                 Text("You Lost!")
-                    .font(.custom("Pokemon Classic", size: 28))
+                    .font(.pokemon(28))
                     .foregroundColor(.white)
 
                 Text("Your score: \(score)")
-                    .font(.custom("Pokemon Classic", size: 20))
+                    .font(.pokemon(20))
                     .foregroundColor(.white)
 
                 Button(action: tryAgainAction) {
                     Text("Try Again")
-                        .font(.custom("Pokemon Classic", size: 18))
+                        .font(.pokemon(18))
                         .foregroundColor(.primary)
                         .padding(.horizontal, 24)
                         .padding(.vertical, 12)
@@ -42,7 +42,7 @@ struct GameOverOverlay: View {
 
                 Button(action: exitAction) {
                     Text("Exit to Main Menu")
-                        .font(.custom("Pokemon Classic", size: 16))
+                        .font(.pokemon(16))
                         .foregroundColor(.primary)
                         .padding(.horizontal, 24)
                         .padding(.vertical, 10)
