@@ -32,7 +32,7 @@ struct GameView: View {
                 
                 PokemonSilhouetteView(
                     pokemon: viewModel.correctPokemon,
-                    isRevealed: viewModel.didSelectAnswer
+                    isRevealed: viewModel.isRoundLocked
                 )
                 
                 Score(viewModel: viewModel)
@@ -84,11 +84,7 @@ private struct Score: View {
             .font(.pokemon(18))
             .foregroundStyle(.primary)
             .padding(10)
-            .background(
-                RoundedRectangle(cornerRadius: 8)
-                    .fill(Color.retroCard)
-                    .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.retroBorder, lineWidth: 2))
-            )
+            .retroCard()
     }
 }
 
@@ -118,11 +114,7 @@ private struct Countdown: View {
             .font(.pokemon(24))
             .foregroundStyle(.primary)
             .padding(10)
-            .background(
-                RoundedRectangle(cornerRadius: 8)
-                    .fill(Color.retroCard)
-                    .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.retroBorder, lineWidth: 2))
-            )
+            .retroCard()
     }
 }
 
@@ -176,11 +168,7 @@ private struct Answers: View {
             .padding(.vertical, 5)
         }
         .padding()
-        .background(
-            RoundedRectangle(cornerRadius: 8)
-                .fill(Color.retroCard)
-                .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.retroBorder, lineWidth: 2))
-        )
+        .retroCard()
         .padding()
     }
 }

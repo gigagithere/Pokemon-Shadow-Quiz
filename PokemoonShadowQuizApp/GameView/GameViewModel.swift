@@ -29,7 +29,7 @@ class GameViewModel {
     var score = 0
     var timeRemaining: Int = 10
     var difficulty: Difficulty = .medium
-    var didSelectAnswer = false
+    var isRoundLocked = false
     var lives = 3
     var selectedPokemon: Pokemon? = nil
     var gameOver = false
@@ -43,7 +43,7 @@ class GameViewModel {
         lives = 3
         gameOver = false
         showGameOver = false
-        didSelectAnswer = false
+        isRoundLocked = false
         nextRound()
     }
 
@@ -65,10 +65,10 @@ class GameViewModel {
     }
 
     func choose(_ pokemon: Pokemon) {
-        guard !didSelectAnswer else { return }
+        guard !isRoundLocked else { return }
 
         stopTimer()
-        didSelectAnswer = true
+        isRoundLocked = true
         selectedPokemon = pokemon
 
         if pokemon == correctPokemon {
@@ -85,7 +85,7 @@ class GameViewModel {
 
         timerTask = Task {
             try await Task.sleep(for: .seconds(1.5))
-            didSelectAnswer = false
+            isRoundLocked = false
             nextRound()
         }
     }
@@ -103,7 +103,7 @@ class GameViewModel {
                     if gameOver { return }
 
                     try await Task.sleep(for: .seconds(1.5))
-                    didSelectAnswer = false
+                    isRoundLocked = false
                     nextRound()
                     return
                 }
@@ -117,7 +117,7 @@ class GameViewModel {
     }
     
     func state(for option: Pokemon) -> AnswerState {
-        guard didSelectAnswer else {
+        guard isRoundLocked else {
             return option == selectedPokemon ? .selected : .idle
         }
         if option == correctPokemon { return .correct }

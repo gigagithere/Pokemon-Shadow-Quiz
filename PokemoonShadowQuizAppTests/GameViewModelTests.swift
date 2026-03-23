@@ -102,7 +102,7 @@ struct GameViewModelTests {
 
     // MARK: - choose – double tap guard
 
-    @Test("Calling choose twice is ignored (guard didSelectAnswer)")
+    @Test("Calling choose twice is ignored (guard )")
     func chooseTwiceIsIgnored() throws {
         vm.nextRound()
         let correct = try #require(vm.correctPokemon)
@@ -118,7 +118,7 @@ struct GameViewModelTests {
         for _ in 0..<3 {
             vm.stopTimer()
             vm.nextRound()
-            vm.didSelectAnswer = false  // reset między rundami (choose ustawia na true, nextRound nie resetuje)
+            vm.isRoundLocked = false  // reset między rundami (choose ustawia na true, nextRound nie resetuje)
 
             let correct = try #require(vm.correctPokemon)
             let wrong = try #require(vm.options.first(where: { $0 != correct }))
