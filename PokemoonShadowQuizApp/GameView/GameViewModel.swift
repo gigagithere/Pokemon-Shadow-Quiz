@@ -90,7 +90,7 @@ class GameViewModel {
         }
     }
 
-    func startTimer() {
+    private func startTimer() {
         stopTimer()
         timerTask = Task {
             while true {
