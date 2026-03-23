@@ -18,7 +18,7 @@ struct AnswerButton: View {
     let title: String
     let state: AnswerState
     let action: () -> Void
-
+    
     var backgroundColor: Color {
         switch state {
         case .idle:     return .retroButton
@@ -27,18 +27,17 @@ struct AnswerButton: View {
         case .wrong:    return .retroWrong
         }
     }
-
+    
     var body: some View {
         Button(action: {
-            if state == .idle {
-                action()
-            }
-        }) {
+            action()
+        })
+        {
             ZStack {
                 RoundedRectangle(cornerRadius: 4)
                     .fill(Color.retroButtonShadow)
                     .offset(y: 4)
-
+                
                 RoundedRectangle(cornerRadius: 4)
                     .fill(backgroundColor)
                     .opacity(state == .correct ? 1.0 : 0.85)
@@ -47,7 +46,7 @@ struct AnswerButton: View {
                         RoundedRectangle(cornerRadius: 4)
                             .stroke(Color.retroBorder, lineWidth: 2)
                     )
-
+                
                 Text(title.uppercased())
                     .font(.custom("Pokemon Classic", size: 18))
                     .foregroundColor(.primary)
