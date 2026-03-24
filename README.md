@@ -21,9 +21,9 @@ A native iOS quiz game where players identify Pokémon from their silhouettes �
 
 ## 📸 App Screenshots
 
-| Start | Game | Settings |
+| Start | Game | Settings(Dark mode) |
 |-------|------|----------|
-| <img src="YOUR_SCREENSHOT_URL" width="200"/> | <img src="YOUR_SCREENSHOT_URL" width="200"/> | <img src="YOUR_SCREENSHOT_URL" width="200"/>
+|<img width="250" height="736" alt="Start" src="https://github.com/user-attachments/assets/0983614a-8314-4b2a-aaa4-2ff3e30d27d2" /> | <img width="250" height="736" alt="Game" src="https://github.com/user-attachments/assets/4d0f4cfb-853f-446a-a7bf-99a97d45e3b7" /> |<img width="250" height="736" alt="Settings" src="https://github.com/user-attachments/assets/534e9ac9-e310-44ae-98ca-07fd53fe5d83" />
 ---
 
 ## 📋 General Info
@@ -60,7 +60,7 @@ Pokemoon Shadow Quiz presents the player with a silhouette of a Pokémon and fou
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/PokemoonShadowQuizApp.git
+   git clone https://github.com/gigagithere/PokemoonShadowQuizApp.git
    ```
 2. Open `PokemoonShadowQuizApp.xcodeproj` in Xcode 16+
 3. Select a simulator or device (iPhone, iOS 17+)
@@ -133,7 +133,7 @@ PokemoonShadowQuizApp/
 - **`ForEach` with indices** — `Answers` uses `ForEach(viewModel.options.indices, id: \.self)` with a string-based `.id()`; since `Pokemon` is `Identifiable` this could be simplified
 - **No animations on score** — a small bump animation on score increment would improve game feel
 - **Single high score** — no per-difficulty leaderboard; a player on Hard is compared against Easy scores
-- **High Scores screen(to be completed)
+- **High Scores screen** (to be completed)
 
 ---
 
