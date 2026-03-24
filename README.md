@@ -1,4 +1,4 @@
-# 🎮 Pokemoon Shadow Quiz
+# 🎮 Pokemon Shadow Quiz
 
 A native iOS quiz game where players identify Pokémon from their silhouettes — built with SwiftUI and modern Swift concurrency as a portfolio/learning project.
 
